@@ -15,7 +15,7 @@ router.patch("/uploadaviso/:id", multer(multerConfig).single("file"),async (req,
     let id = req.params.id;
 
     let query = "update avisos set filename = ? where id = ?"
-    const image = `http://localhost:3000/files/${filename}`;
+    // const image = `http://localhost:3000/files/${filename}`;
    
     connection.query(query,[filename,id],(err,results)=>{
        if(!err){

@@ -1,0 +1,545 @@
+<html>
+    <head>
+        <style>
+
+          #cabecalhopai{
+            margin: auto 0 ;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+
+      
+          }
+
+          #cabecalhofilho{
+            margin: auto 0 ;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: -40px;
+          }
+      
+   /*        div#cabecalhopai #imgcabecalho{
+               background-image: url('https://back-sta.herokuapp.com/files/cabrod.jpg') ;
+               background-repeat: no-repeat;
+               width: 100%;
+               height: 100%;
+               position:relative;
+              
+           } */
+
+            table{
+                font-family: arial,sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin-top:90px;
+                font-size: 8px;
+            }
+        
+            td{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                height: 70px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+            <div id="cabecalhopai">
+              <div id="imgcabecalho"></div>
+              <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+            </div>
+            
+            <table  class="table table-bordered" class="tabela-1" >
+            
+           
+              <div id="imgpage1"> </div>
+
+                <thead class="head">
+                  <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Local</th>
+                    <th scope="col">Ministros</th> 
+                   
+                  </tr>
+                </thead>
+           
+                <tbody>
+
+                      <% pagina1.forEach(p1 =>{ %>
+                    <tr>
+                        <td><%= p1.data %></td>
+                        <td><%= p1.hora %></td>
+                        <td><%= p1.dia %></td>
+                        <td><%= p1.comunidade %></td>
+
+                        <td>  
+                         
+                          <%  JSON.parse(p1.ministros).forEach(ministro =>{ %>  
+                          <%= ministro.nome %> <br>
+                          <% }) %>
+          
+                        </td> 
+              
+                 
+                        
+                
+    
+                    </tr>
+
+                    <% }) %>
+                 
+              
+                </tbody>
+              </table>
+              
+              <br><br>
+
+            <% if(pagina2 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage2"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+                <% pagina2.forEach(p2 =>{ %>
+                  <tr>
+                      <td><%= p2.data %></td>
+                      <td><%= p2.hora %></td>
+                      <td><%= p2.dia %></td>
+                      <td><%= p2.comunidade %></td>
+                  
+                      <td>  
+                        <%  JSON.parse(p2.ministros).forEach(ministro =>{ %>  
+                        <%= ministro.nome %> <br>
+                        <% }) %>
+                      </td> 
+                  </tr>
+
+                  <% }) %>
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina3 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina3.forEach(p3 =>{ %>
+                  <tr>
+                      <td><%= p3.data %></td>
+                      <td><%= p3.hora %></td>
+                      <td><%= p3.dia %></td>
+                      <td><%= p3.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p3.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina4 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina4.forEach(p4 =>{ %>
+                  <tr>
+                      <td><%= p4.data %></td>
+                      <td><%= p4.hora %></td>
+                      <td><%= p4.dia %></td>
+                      <td><%= p4.comunidade %></td>
+                      d> 
+                      <td>  
+                        <%  JSON.parse(p4.ministros).forEach(ministro =>{ %>  
+                        <%= ministro.nome %> <br>
+                        <% }) %>
+                      </td> 
+                  
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina5 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina5.forEach(p5 =>{ %>
+                  <tr>
+                      <td><%= p5.data %></td>
+                      <td><%= p5.hora %></td>
+                      <td><%= p5.dia %></td>
+                      <td><%= p5.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p5.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                    
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina6 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina6.forEach(p6 =>{ %>
+                  <tr>
+                      <td><%= p6.data %></td>
+                      <td><%= p6.hora %></td>
+                      <td><%= p6.dia %></td>
+                      <td><%= p6.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p6.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                    
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina7 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina7.forEach(p7 =>{ %>
+                  <tr>
+                      <td><%= p7.data %></td>
+                      <td><%= p7.hora %></td>
+                      <td><%= p7.dia %></td>
+                      <td><%= p7.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p7.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina8 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina8.forEach(p8 =>{ %>
+                  <tr>
+                      <td><%= p8.data %></td>
+                      <td><%= p8.hora %></td>
+                      <td><%= p8.dia %></td>
+                      <td><%= p8.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p8.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                    
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina9 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina9.forEach(p9 =>{ %>
+                  <tr>
+                      <td><%= p9.data %></td>
+                      <td><%= p9.hora %></td>
+                      <td><%= p9.dia %></td>
+                      <td><%= p9.comunidade %></td>
+                       
+                    <td>  
+                      <%  JSON.parse(p9.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                    
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+            <br><br>
+
+            <% if(pagina10 != undefined){ %>
+
+              
+              <div id="cabecalhofilho">
+                <div id="imgcabecalho"></div>
+                <h3 style="text-align: center; font-size: 10px;">Sistema Santa Teresinha - Escala <%= tipo%></h3>
+              </div>
+
+            <table  class="table table-bordered" class="tabela-1" >
+            
+              <div id="imgpage3"> </div>
+
+              <thead class="head">
+                <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Local</th>
+                  <th scope="col">Ministros</th>
+                 
+                </tr>
+              </thead>
+
+              <tbody>
+
+                    <% pagina10.forEach(p10 =>{ %>
+                  <tr>
+                      <td><%= p10.data %></td>
+                      <td><%= p10.hora %></td>
+                      <td><%= p10.dia %></td>
+                      <td><%= p10.comunidade %></td>
+                      <
+                    <td>  
+                      <%  JSON.parse(p10.ministros).forEach(ministro =>{ %>  
+                      <%= ministro.nome %> <br>
+                      <% }) %>
+                    </td> 
+                    
+        
+                  </tr>
+
+                  <% }) %>
+            
+              </tbody>
+            </table>
+
+            <% } %>
+
+    </body>
+</html>

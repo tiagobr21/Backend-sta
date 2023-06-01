@@ -1102,7 +1102,9 @@ router.get("/select_leitores",(req,res)=>{
             let query = ('insert into salmistas values (default,?)');
             connection.query(query,[body.nome],(err,result)=>{
               if(!err){
-                res.status(200).json({message:'salmista criado com Sucesso'});
+
+                res.status(200).json({message:'Salmista criado com Sucesso'});
+
               }else{
                 res.status(500).json(err);
               }
@@ -1121,7 +1123,9 @@ router.get("/select_leitores",(req,res)=>{
     let query = ("update salmistas set nome=? where id=?");
     connection.query(query,[body.nome,id],(err,results)=>{
       if(!err){
-        return res.status(200).json({message:'salmista atualizado com Sucesso'});
+
+        return res.status(200).json({message:'Salmista atualizado com Sucesso'});
+
       }else{
         res.status(500).json(err);
       }
@@ -1138,7 +1142,9 @@ router.get("/select_leitores",(req,res)=>{
         if(results.affectedRows==0){
             res.status(404).json({message:'id não encontrado'});
         }
-        return res.status(200).json({message:'salmista deletado com Sucesso'});
+
+        return res.status(200).json({message:'Salmista deletado com Sucesso'});
+
     }else{
         res.status(500).json(err);
     }

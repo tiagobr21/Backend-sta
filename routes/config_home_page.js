@@ -11,7 +11,7 @@ require('dotenv').config();
 router.patch("/uploadaviso/:id", multer(multerConfig).single("file"),async (req,res)=>{
 
 
-    let filename = req.file.filename;
+    let filename = req.file.location;
     let id = req.params.id;
 
     let query = "update avisos set filename = ? where id = ?"
